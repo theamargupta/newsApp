@@ -13,7 +13,7 @@ export const getNewsRows = async (page, publishedAt) => {
       },
     });
     if (res.data.status === 'ok') {
-      console.log(res.data.articles);
+
       return res.data.articles.map((news, index) => ({
         key: index,
         num: (

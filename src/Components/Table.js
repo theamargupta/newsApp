@@ -39,7 +39,6 @@ const BasicTable = ({ query }) => {
   useEffect(() => {
     setFilterRows(filterPosts(rows, query));
   }, [rows, query]);
-  console.log(rows);
   return (
     <>
       <TableContainer component={Paper}>
@@ -50,8 +49,12 @@ const BasicTable = ({ query }) => {
                 <StyledTableCell
                   key={index}
                   align='left'
-                  onClick={data.headerName === 'Date' && handlepublish}
-                  className={data.headerName === 'Date' && classes.date}
+                  onClick={
+                    data.headerName === 'Date' ? handlepublish : undefined
+                  }
+                  className={
+                    data.headerName === 'Date' ? classes.date : undefined
+                  }
                 >
                   {data.headerName}
                   {data.headerName === 'Date' && (
