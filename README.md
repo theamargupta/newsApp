@@ -1,6 +1,6 @@
 # I Have used ReactJS, Material UI
 
-Deployed Link
+Deployed Link (Not working Cors Error)
 => https://newss-web-app.netlify.app/
 
 My Portfolio Link
